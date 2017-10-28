@@ -34,6 +34,7 @@ function textToSpeech() {
 
 function debugFunc(record) {
 	window.r = record;
+        window.tt = tts_text; 
 	console.log(tts_text.slice(-1));
 }
 
