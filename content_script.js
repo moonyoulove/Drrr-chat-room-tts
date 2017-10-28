@@ -6,7 +6,7 @@ createDOM();
 onDomUpdate();
 tts_player.onended = (function() {
 	tts_text.shift();
-	if (tts_player.ended && tts_text != "") textToSpeech();
+	if (tts_text[0] !== undefined) textToSpeech();
 });
 console.log("啟動朗讀");
 
