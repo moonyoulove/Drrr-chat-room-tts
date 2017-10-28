@@ -8,6 +8,11 @@ tts_player.onended = (function() {
 	tts_text.shift();
 	if (tts_text[0] !== undefined) textToSpeech();
 });
+tts_player.onerror = (function() {
+	tts_text[0]="不能朗讀";
+	textToSpeech();
+});
+
 console.log("啟動朗讀");
 
 function onDomUpdate() {
